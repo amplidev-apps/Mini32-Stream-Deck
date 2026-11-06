@@ -1,0 +1,50 @@
+name: mini32_stream_deck
+description: Controladora MIDI, vinhetas e OBS para Windows.
+publish_to: none
+version: 0.3.0-dev.2+5
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/branding/final-logo.png
+    - assets/fonts/LICENSE-Roboto.txt
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto-thin.ttf
+          weight: 100
+        - asset: assets/fonts/roboto-light.ttf
+          weight: 300
+        - asset: assets/fonts/roboto-regular.ttf
+          weight: 400
+        - asset: assets/fonts/roboto-medium.ttf
+          weight: 500
+        - asset: assets/fonts/roboto-bold.ttf
+          weight: 700
+        - asset: assets/fonts/roboto-black.ttf
+          weight: 900
+        - asset: assets/fonts/roboto-thinitalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/roboto-lightitalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/roboto-italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/roboto-mediumitalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/roboto-bolditalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/roboto-blackitalic.ttf
+          weight: 900
+          style: italic

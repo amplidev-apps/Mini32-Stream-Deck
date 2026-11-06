@@ -1,0 +1,87 @@
+MINI32 STREAM DECK - desenvolvimento 0.3.0-dev.2 (Free)
+
+FONTE DA INTERFACE
+A familia TT Interphases Pro esta incluida na pasta fonts/tt-interphases-pro.
+Mantenha essa pasta ao lado do executavel. O aplicativo carrega a fonte
+automaticamente ao abrir. Os arquivos originais tem "Trial" no nome;
+o titular do projeto informou ter autorizacao direta do autor para este uso.
+
+COMO ABRIR
+Abra mini32_stream_deck.exe nesta pasta.
+No projeto, voce tambem pode usar Iniciar Mini32.cmd.
+Mantenha a pasta engine e os demais arquivos ao lado do executavel.
+
+PRIMEIRO USO
+1. Feche a bancada de testes e o diagnostico MIDI para liberar a controladora.
+2. Abra Conexoes, escolha AKM320 e clique Conectar.
+3. Importe um WAV/MP3 na Biblioteca (ate 4 horas por arquivo).
+4. Clique em uma tecla, escolha a acao e o audio e clique Salvar tecla.
+   O volume desta tecla e independente, mesmo se outras usarem a mesma acao.
+   Para dar uma imagem a tecla, use Escolher imagem da tecla.
+   Na edicao Free, escolha 16 das 32 teclas fisicas. Clicar em uma posicao
+   inativa permite substituir uma das ativas; a configuracao antiga nao e apagada.
+5. Mude de Editar para Usar. Agora a Mini 32 dispara a configuracao.
+6. Para OBS, habilite seu servidor WebSocket em Ferramentas, e informe
+   porta/senha em Conexoes. Conecte antes de escolher cenas/entradas.
+
+PARA OUVIR NA TRANSMISSAO
+O processo que produz o audio e Mini32.Engine.exe. Capture esse processo
+no OBS. Evite duplicar o mesmo som na captura do desktop.
+
+FECHAR E SAIR
+O cabecalho do app tem botoes para minimizar, ampliar/restaurar e fechar.
+Minimizar envia a janela para a barra de tarefas; fechar recolhe para a bandeja.
+Arraste a area da logo para mover a janela; dois cliques nela ampliam/restauram.
+Use o icone na bandeja para abrir,
+parar os sons ou Sair. Sair libera a Mini 32 para seu programa de musica.
+Ao reabrir, o modo inicial e Editar; nenhum som ou transmissao e retomado.
+
+TECLAS E OITAVAS
+O mapa inicial usa as 32 notas 53-84 do diagnostico. Mantenha a oitava
+utilizada no teste. Aprender tecla fisica pode corrigir um vinculo.
+Os botoes de oitava nao selecionam bancos automaticamente nesta versao.
+Bancos adicionais salvos anteriormente continuam guardados, mas nao ficam
+disponiveis na edicao Free. O sistema de seriais Pro sera feito depois.
+
+O QUE ESTA INCLUIDO
+16 teclas configuraveis entre as 32 posicoes fisicas; um banco; acoes
+compartilhadas; importar
+WAV/MP3; 8 sons simultaneos; reiniciar/segurar/alternar; volume individual
+e geral; loop; recorte; fade de entrada e ao parar; grupos exclusivos;
+reducao de musica interna; pitch de -12 a +12 mantendo a duracao.
+OBS: cenas, mute de entradas, previa/transicao, gravacao e transmissao.
+Inicio/fim de transmissao e parada de gravacao exigem segurar por 1 segundo.
+Salvar tecla confirma a edicao; alteracoes de bancos/conexoes sao salvas.
+Menus na barra superior e no clique direito. Imagens PNG/JPEG por tecla
+aparecem com 50% de opacidade na interface; a Mini 32 fisica nao tem telas.
+O cabecalho mostra a forma de onda do audio realmente reproduzido.
+Quando varios sons tocam, ela representa a mistura deles. A base visual
+agora usa #1B1919; final-app-icon.png e a fonte definitiva dos icones.
+O menu Exibir permite escolher ou remover um wallpaper PNG/JPEG. Ele e copiado
+para os dados do app e aparece atras da interface com 50% de opacidade.
+Nao existe limite comercial para a quantidade de audios importados.
+
+LIMITES DESTA ENTREGA DE DESENVOLVIMENTO
+WAV/MP3 mono/estereo de ate 4 horas. Faixas acima de 2 minutos usam
+carregamento progressivo com buffer limitado; vinhetas curtas usam cache
+de 128 MB, mais as vozes em uso. Arquivos fora do cache podem ter atraso
+no primeiro disparo. Musicas longas podem levar um instante para iniciar.
+Oito vozes e pitch simultaneo ainda precisam de teste de carga no seu PC.
+O pitch afeta a ultima vinheta habilitada; a forca da tecla nao muda volume.
+A reducao automatica afeta apenas sons marcados como musica neste app.
+Macros, atalhos Windows, exportacao/importacao de pacotes, inicio com
+Windows, exclusao de bancos e personalizacao de cores ficam para depois.
+Para atribuir audio, use os botoes da biblioteca/editor; nao ha arrastar e soltar.
+Esta versao nao cria teclas HID virtuais reconhecidas por outros programas.
+
+SEUS DADOS
+Biblioteca, configuracoes, backup e logs:
+%LOCALAPPDATA%\Mini32 Stream Deck
+Senha OBS lembrada e protegida pelo Windows para o seu usuario.
+Menu > Abrir dados e logs abre essa pasta.
+
+PARA COMPILAR O PROJETO
+Flutter esta em .tools\flutter no projeto. Instale as ferramentas Microsoft
+Build Tools com Desenvolvimento para desktop com C++, incluindo CMake e
+Windows SDK. Execute app\Build.ps1. O pacote fica em app\dist.
+As ferramentas C++, CMake e Windows SDK foram instaladas neste computador.

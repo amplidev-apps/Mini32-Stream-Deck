@@ -1,0 +1,17 @@
+.tools/
+tt_interphases_pro/
+tt_interphases_pro.zip
+licensed-fonts/
+*.log
+app/bin/
+app/dist/
+app/flutter/.dart_tool/
+app/flutter/build/
+app/flutter/windows/flutter/ephemeral/
+app/flutter/.flutter-plugins-dependencies
+prototype/**/bin/
+prototype/**/deps/
+prototype/**/logs/
+
+docs.zip
+prototype/midi-diagnostic/logs.zip
